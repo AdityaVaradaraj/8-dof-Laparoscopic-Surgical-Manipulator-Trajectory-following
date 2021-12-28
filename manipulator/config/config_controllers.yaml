@@ -1,0 +1,64 @@
+# Robot name goes here
+manipulator: # change the name
+  # default controller
+ joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 7100
+
+  # Controller 1
+   
+ controller_q1: # change the name
+  type: effort_controllers/JointPositionController # Type of controller. 
+  joint: joint1 # Name of the joint.
+  pid: {p: 1000, i: 100, d: 5}
+ 
+ controller_q2: # change the name
+  type: effort_controllers/JointPositionController # Type of controller. 
+  joint: joint2 # Name of the joint.
+  pid: {p: 10000, i: 1, d: 10}
+  
+ controller_q3: # change the name
+  type: effort_controllers/JointPositionController # Type of controller. 
+  joint: joint3 # Name of the joint.
+  pid: {p: 100, i: 10, d: 10}
+ 
+ controller_q4: # change the name
+  type: effort_controllers/JointPositionController # Type of controller. 
+  joint: joint4 # Name of the joint.
+  pid: {p: 1, i: 0.010, d: 0.10}
+ 
+ controller_q5: # change the name
+  type: effort_controllers/JointPositionController # Type of controller. 
+  joint: joint5 # Name of the joint.
+  pid: {p: 1, i: 0.01, d: 0.01}
+ 
+ controller_q6: # change the name
+  type: effort_controllers/JointPositionController # Type of controller. 
+  joint: joint6 # Name of the joint.
+  pid: {p: 0.1, i: 0.001, d: 0.01}
+  
+ controller_q7: # change the name
+  type: effort_controllers/JointPositionController # Type of controller. 
+  joint: inst_joint_2 # Name of the joint.
+  pid: {p: 0.1, i: 0.01, d: 0.01}
+  
+ controller_q8: # change the name
+  type: effort_controllers/JointPositionController # Type of controller. 
+  joint: inst_joint_3 # Name of the joint.
+  pid: {p: 0.1, i: 0.01, d: 0.01}
+  
+ #gazebo_ros_control:
+  #pid_gains:
+   #joint1:
+    #p: 100.100
+    #i: 100
+    #d: 100
+
+
+  # Controller 2
+  # Controller 3
+  # ....
+  # Controller n
+
+
+ 

@@ -1,0 +1,15 @@
+controller_list:
+  - name: fake_manipulator_controller
+    type: $(arg execution_type)
+    joints:
+      - joint1
+      - joint2
+      - joint3
+      - joint4
+      - joint5
+      - joint6
+      - inst_joint_2
+      - inst_joint_3
+initial:  # Define initial robot poses.
+  - group: manipulator
+    pose: home_position

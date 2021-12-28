@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="manipulator">
+  <link
+    name = "dummy_link">
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="470.485" />
+      <inertia
+        ixx="1.1576"
+        ixy="-2.3283E-33"
+        ixz="-1.852E-33"
+        iyy="2.0567"
+        iyz="-1.6693E-17"
+        izz="1.1576" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name = "dummy_joint"
+    type ="fixed">
+    <parent
+    link = "dummy_link"/>
+    <child
+    link = "base_link"/>
+  </joint>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="0.0028507 0.17486 -2.6786E-18"
+        rpy="0 0 0" />
+      <mass
+        value="66.667" />
+      <inertia
+        ixx="2.6157"
+        ixy="-0.63355"
+        ixz="5.5511E-17"
+        iyy="4.1465"
+        iyz="-2.162E-17"
+        izz="4.6835" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.161"
+      rpy="1.5708 0 -2.7846" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower= "-1.57"
+      upper= "1.57"
+      effort = "200"
+      velocity= "1" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-1.5959E-15 0.5224 0"
+        rpy="0 0 0" />
+      <mass
+        value="52.586" />
+      <inertia
+        ixx="6.6115"
+        ixy="1.7451E-14"
+        ixz="-3.3307E-16"
+        iyy="0.52305"
+        iyz="-1.1588E-15"
+        izz="6.9092" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0.33 0.484 0"
+      rpy="3.1416 0 2.5614" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower= "-1.57"
+      upper= "1.57"
+      effort = "800"
+      velocity= "1" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="0.47919 0.087695 -1.0547E-15"
+        rpy="0 0 0" />
+      <mass
+        value="22.57" />
+      <inertia
+        ixx="0.14644"
+        ixy="-0.25523"
+        ixz="3.1973E-15"
+        iyy="1.9779"
+        iyz="5.2736E-16"
+        izz="2.0343" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="0 1.15 0"
+      rpy="-3.1416 0 3.054" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower= "-1.57"
+      upper= "1.57"
+      effort = "180"
+      velocity= "0.5" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="0.15139 -6.6613E-16 3.3307E-16"
+        rpy="0 0 0" />
+      <mass
+        value="1.3701" />
+      <inertia
+        ixx="0.0012339"
+        ixy="2.2362E-18"
+        ixz="-2.8677E-17"
+        iyy="0.019109"
+        iyz="-8.6736E-19"
+        izz="0.019093" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="0.82618 0.115 0"
+      rpy="-0.43858 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower= "-1.57"
+      upper= "1.57"
+      effort = "0.5"
+      velocity= "0.2" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="0.066156 -6.2501E-10 1.3144E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.15807" />
+      <inertia
+        ixx="2.551E-05"
+        ixy="-4.7019E-12"
+        ixz="9.6707E-12"
+        iyy="0.00041225"
+        iyz="-1.3708E-11"
+        izz="0.0004125" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="0.39382 0 0"
+      rpy="0 0 -0.3908" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower= "-1.57"
+      upper= "1.57"
+      effort = "0.1"
+      velocity= "0.5" />
+  </joint>
+  <link
+    name="link6">
+    <inertial>
+      <origin
+        xyz="0.087506 1.3323E-15 2.2204E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.033609" />
+      <inertia
+        ixx="2.425E-06"
+        ixy="-2.4337E-18"
+        ixz="-3.6773E-20"
+        iyy="0.00016671"
+        iyz="3.3881E-21"
+        izz="0.00016671" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/link6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint6"
+    type="revolute">
+    <origin
+      xyz="0.10176 0 0"
+      rpy="2.612 0 0" />
+    <parent
+      link="link5" />
+    <child
+      link="link6" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower= "-1.57"
+      upper= "1.57"
+      effort = "0.000025"
+      velocity= "0.05" />
+  </joint>
+  <link
+    name="inst_link_2">
+    <inertial>
+      <origin
+        xyz="0.030963 5.4738E-10 2.6295E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.002737" />
+      <inertia
+        ixx="2.2031E-08"
+        ixy="2.81E-14"
+        ixz="2.0419E-14"
+        iyy="7.4536E-07"
+        iyz="4.8625E-15"
+        izz="7.4671E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/inst_link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/inst_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="inst_joint_2"
+    type="revolute">
+    <origin
+      xyz="0.28124 0 0"
+      rpy="-1.5708 1.2807 3.1416" />
+    <parent
+      link="link6" />
+    <child
+      link="inst_link_2" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower= "0"
+      upper= "3.14"
+      effort = "0.0001"
+      velocity= "0" />
+  </joint>
+  <link
+    name="inst_link_3">
+    <inertial>
+      <origin
+        xyz="0.0090838 3.2426E-09 -3.8596E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.00025593" />
+      <inertia
+        ixx="5.1131E-10"
+        ixy="6.2729E-16"
+        ixz="1.8222E-16"
+        iyy="9.4856E-09"
+        iyz="5.4457E-15"
+        izz="9.4979E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/inst_link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://manipulator/meshes/inst_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="inst_joint_3"
+    type="revolute">
+    <origin
+      xyz="0.058 0 0"
+      rpy="-1.5708 -1.3013 -3.1416" />
+    <parent
+      link="inst_link_2" />
+    <child
+      link="inst_link_3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower= "-3.140"
+      upper= "0"
+      effort = "0.000001"
+      velocity= "0" />
+  </joint>
+  <gazebo reference = "base_link">
+   <material>Gazebo/Black</material>
+  </gazebo>
+  <gazebo reference = "link1">
+   <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference = "link2">
+   <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference = "link3">
+   <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference = "link4">
+   <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference = "link5">
+   <material>Gazebo/Orange</material>
+  </gazebo>
+  <gazebo reference = "link6">
+   <material>Gazebo/White</material>
+  </gazebo>
+  <gazebo reference = "inst_lik_2">
+   <material>Gazebo/White</material>
+  </gazebo>
+  <transmission name="trans1">
+   <type>SimpleTransmission</type>
+   <joint name="joint1">
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor1">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <transmission name="trans2">
+   <type>SimpleTransmission</type>
+   <joint name="joint2">
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor2">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <transmission name="trans3">
+   <type>SimpleTransmission</type>
+   <joint name="joint3">
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor3">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <transmission name="trans4">
+   <type>SimpleTransmission</type>
+   <joint name="joint4">
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor4">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <transmission name="trans5">
+   <type>SimpleTransmission</type>
+   <joint name="joint5">
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor5">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <transmission name="trans6">
+   <type>SimpleTransmission</type>
+   <joint name="joint6">
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor6">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <transmission name="trans7">
+   <type>SimpleTransmission</type>
+   <joint name="inst_joint_2">
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor7">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <transmission name="trans8">
+   <type>SimpleTransmission</type>
+   <joint name="inst_joint_3">
+     <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </joint>
+  <actuator name="motor8">
+    <mechanicalReduction>1</mechanicalReduction>
+    <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+  </actuator>
+  </transmission>
+  <gazebo>
+   <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+     <robotNamespace>/manipulator</robotNamespace>
+     <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+     <legacyModeNS>true</legacyModeNS>
+   </plugin>
+  </gazebo>
+</robot>
